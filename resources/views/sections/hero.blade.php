@@ -3,7 +3,7 @@
         <h2>Преобразите свой руль</h2>
         <p>Закажите профессиональную обтяжку и придайте рулю уникальный вид.</p>
 
-        <form action="" method="POST">
+        <form action="{{ route('order.store') }}" method="POST">
             @csrf
             <div>
                 <label for="name">Ваше имя</label>
@@ -13,13 +13,7 @@
                 <label for="phone">Номер телефона</label>
                 <input type="tel" id="phone" name="phone" required>
             </div>
-            <div>
-                <label>
-                    <input type="checkbox" name="consent" required>
-                    Согласие на обработку данных
-                </label>
-            </div>
-            <button type="submit" class="cta-btn">Оформить заказ</button>
+            <button type="submit" class="cta-btn">Оставить заявку</button>
         </form>
     </div>
 </section>
