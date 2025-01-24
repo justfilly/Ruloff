@@ -1,22 +1,39 @@
 .hero {
-    background: linear-gradient(to right, #4caf50, #81c784);
+    background-size: cover;
     color: #fff;
-    padding: 80px 0;
+    position: relative;
+    height: 80vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
 }
 
-.hero h2 {
-    font-weight: 700;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+.hero .container {
+    padding-top: 4%;
 }
 
-.hero p {
-    font-size: 1.25rem;
-    margin-bottom: 30px;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.hero h2, .hero p {
+    z-index: 2;
+    position: relative;
 }
 
 .hero form {
-    max-width: 500px;
+    z-index: 2;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 30px;
 }
 
 .hero .form-control {
@@ -24,17 +41,51 @@
     border: 1px solid #ced4da;
     padding: 10px;
     font-size: 1rem;
+    height: 50px;
+    display: flex;
+    align-items: center;
 }
 
 .hero .btn {
     font-size: 1.2rem;
-    padding: 10px 20px;
+    padding: 0 20px;
     border-radius: 5px;
     background: #007bff;
     color: #fff;
     transition: background-color 0.3s ease;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .hero .btn:hover {
     background: #0056b3;
+}
+
+.hero .form-check {
+    font-size: 1rem;
+    margin-top: 15px;
+}
+
+.hero .form-check .form-check-label {
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    line-height: normal;
+}
+
+.hero .form-check-input {
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    border: 2px solid #ced4da;
+    background-color: transparent;
+    margin-top: 0;
+    align-self: center;
+}
+
+.hero .form-check-input:checked {
+    background-color: #007bff;
+    border-color: #007bff;
 }
