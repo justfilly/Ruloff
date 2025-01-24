@@ -1,0 +1,11 @@
+footer {
+    background-color: #222;
+    color: #ccc;
+    font-size: 0.9rem;
+    border-top: 1px solid #444;
+}
+
+footer p {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}

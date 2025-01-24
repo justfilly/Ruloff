@@ -1,0 +1,43 @@
+#order-form {
+    background-color: #f9f9f9;
+    padding: 60px 0;
+}
+
+#order-form h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #333;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+#order-form .table {
+    border: 1px solid #ddd;
+    margin: 0 auto;
+}
+
+#order-form .table th,
+#order-form .table td {
+    font-size: 1.1rem;
+    vertical-align: middle;
+    padding: 15px;
+}
+
+#order-form .table th {
+    background-color: #333;
+    color: #fff;
+    font-weight: 600;
+}
+
+#order-form .table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f1f1f1;
+}
+
+#order-form .table-bordered {
+    border: 2px solid #ddd;
+}
+
+#order-form .table-bordered th,
+#order-form .table-bordered td {
+    border: 1px solid #ddd;
+}
