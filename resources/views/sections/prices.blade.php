@@ -1,4 +1,4 @@
-<section id="order-form" class="py-5">
+<section id="prices" class="py-5">
     <div class="container">
         <h2 class="text-center mb-4">Цены на обтяжку рулей</h2>
         <div class="table-responsive">
