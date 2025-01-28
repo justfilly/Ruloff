@@ -11,7 +11,7 @@
                 </h2>
                 <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                        Цена на обтяжку руля зависит от материала и уровня кастомизации. Пожалуйста, свяжитесь с нами для получения подробностей.
+                        Цена на обтяжку руля зависит от материала и уровня кастомизации. Пожалуйста, свяжитесь c нами для получения подробностей.
                     </div>
                 </div>
             </div>
