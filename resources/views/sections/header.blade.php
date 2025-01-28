@@ -17,8 +17,8 @@
             <div class="col-4 text-center">
                 <nav>
                     <ul class="list-unstyled mb-0">
-                        <li><a href="#order-form" class="nav-link">Цены</a></li>
-                        <li><a href="#about" class="nav-link">Примеры работ</a></li>
+                        <li><a href="#prices" class="nav-link">Цены</a></li>
+                        <li><a href="#products-view" class="nav-link">Примеры работ</a></li>
                         <li><a href="#reviews" class="nav-link">Отзывы</a></li>
                         <li><a href="#map" class="nav-link">Карта</a></li>
                     </ul>
