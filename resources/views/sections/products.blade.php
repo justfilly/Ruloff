@@ -1,4 +1,4 @@
-<section id="products-view" class="py-5">
+<section id="products" class="py-5">
     <div class="container">
         <h2 class="text-center mb-4">Примеры работ</h2>
         <div class="row g-4">

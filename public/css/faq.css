@@ -6,15 +6,27 @@
 #faq h2 {
     font-size: 2rem;
     font-weight: bold;
-    margin-bottom: 40px;
     color: #333;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.accordion-item {
+    margin-bottom: 10px;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.accordion-item:not(:last-child) {
+    border-bottom: 1px solid #ddd;
 }
 
 .accordion-button {
     font-size: 1.1rem;
     font-weight: 500;
     color: #333;
+    padding: 22px 20px; 
+    border-radius: 8px;
+    border: 1px solid #ddd;
 }
 
 .accordion-button:not(.collapsed) {
@@ -25,4 +37,5 @@
 .accordion-body {
     font-size: 0.95rem;
     color: #555;
+    padding: 15px 20px;
 }

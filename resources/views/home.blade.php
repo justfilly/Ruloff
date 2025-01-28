@@ -4,9 +4,9 @@
     <link rel="stylesheet" href="{{ asset('css/header.css') }}">
     <link rel="stylesheet" href="{{ asset('css/hero.css') }}">
     <link rel="stylesheet" href="{{ asset('css/prices.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/products_view.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/products.css') }}">
     <link rel="stylesheet" href="{{ asset('css/reviews.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/qna.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/faq.css') }}">
     <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
 @endpush
 
@@ -14,8 +14,8 @@
     @include('sections.header')
     @include('sections.hero')
     @include('sections.prices')
-    @include('sections.products_view')
+    @include('sections.products')
     @include('sections.reviews')
-    @include('sections.qna')
+    @include('sections.faq')
     @include('sections.footer')
 @endsection
