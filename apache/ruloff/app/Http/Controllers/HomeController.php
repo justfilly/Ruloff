@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\PriceItem;
 use App\Models\Product;
 use App\Models\Review;
+use App\Models\Faq;
 
 class HomeController extends Controller 
 {
@@ -15,7 +16,8 @@ class HomeController extends Controller
         $additionalServicesPrices = PriceItem::where('category', 'additional services')->get();
         $products = Product::all();
         $reviews = Review::all();
+        $faqs = Faq::all();
 
-        return view('home', compact('steeringWheelPrices', 'additionalServicesPrices', 'products', 'reviews'));
+        return view('home', compact('steeringWheelPrices', 'additionalServicesPrices', 'products', 'reviews', 'faqs'));
     }
 }
