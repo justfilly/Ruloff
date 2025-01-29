@@ -3,17 +3,17 @@
 namespace App\Http\Controllers;
 
 use App\Models\PriceItem;
+use App\Models\Product  ;
 use Illuminate\Http\Request;
 
-class HomeController extends Controller  // Correctly extend Controller
+class HomeController extends Controller 
 {
     public function index()
     {
-        // Fetch all prices for steering wheels and additional services
         $steeringWheelPrices = PriceItem::where('category', 'steering wheels')->get();
         $additionalServicesPrices = PriceItem::where('category', 'additional services')->get();
+        $products = Product::all();
 
-        // Return the 'home' view with dynamic data
-        return view('home', compact('steeringWheelPrices', 'additionalServicesPrices'));
+        return view('home', compact('steeringWheelPrices', 'additionalServicesPrices', 'products'));
     }
 }
