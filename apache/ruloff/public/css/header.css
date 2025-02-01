@@ -3,11 +3,6 @@ header {
     border-bottom: 1px solid #ddd;
 }
 
-header .container {
-    padding-left: 0;
-    padding-right: 0;
-}
-
 header .contact-info {
     font-size: 14px;
 }
@@ -24,7 +19,7 @@ header .contact-info a {
 
 header .social-links a {
     color: #495057;
-    margin-right: 1rem;
+    margin-left: 1rem;
 }
 
 header nav ul {
@@ -43,15 +38,10 @@ header nav .nav-link:hover {
     color: #007bff;
 }
 
-.social-links {
-    display: flex;
-    justify-content: flex-end;
-}
-
 .social-link {
     display: inline-flex;
     align-items: center;
-    margin-right: 15px;
+    margin-right: 0px;
 }
 
 .social-icon {
@@ -59,15 +49,16 @@ header nav .nav-link:hover {
     height: auto;
 }
 
-.social-links a:hover .social-icon {
-    fill: #007bff; 
+header .social-links {
+    margin-left: auto;
+    display: flex;
+    justify-content: flex-end;
 }
 
-@media (min-width: 576px) {
+
+@media (min-width: 1200px) {
     header .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        max-width: calc(100% - 200px);
     }
 }
 
@@ -76,11 +67,121 @@ header nav .nav-link:hover {
         text-align: center;
     }
 
-    header .social-links {
-        display: none;
-    }
-
     header nav {
         text-align: center;
     }
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: #fff;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+    transition: left 0.3s ease-in-out;
+    z-index: 1050;
+}
+
+.mobile-menu .menu-content {
+    padding: 15px;
+    position: relative;
+}
+
+.mobile-menu .menu-btn {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 24px;
+    padding: 0px 8px;
+    border-radius: 5px;
+}
+
+.mobile-menu ul {
+    padding-left: 0;
+    margin-top: 65px;
+}
+
+.mobile-menu li {
+    list-style: none;
+}
+
+.mobile-menu .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px;
+    font-size: 18px;
+    color: #333;
+    text-decoration: none;
+}
+
+.mobile-menu .nav-link i {
+    font-size: 1.5rem;
+}
+
+.mobile-menu .nav-link:hover {
+    color: #007bff;
+}
+
+hr {
+    margin: 20px 0;
+    border: none;
+    height: 2px;
+    background: #ddd;
+}
+
+.menu-phone, .menu-address {
+    font-size: 16px;
+    color: #495057;
+    padding: 10px 0;
+}
+
+.menu-phone a, .menu-address a {
+    color: #495057;
+    text-decoration: none;
+}
+
+.menu-phone i, .menu-address i {
+    margin-right: 8px;
+}
+
+.menu-phone, .menu-address {
+    display: block;
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.menu-phone {
+    margin-top: 15px;
+}
+
+.menu-address {
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+.menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1049;
+}
+
+#menu-toggle:checked ~ .mobile-menu {
+    left: 0;
+}
+
+#menu-toggle:checked ~ .menu-overlay {
+    display: block;
 }
