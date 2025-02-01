@@ -1,4 +1,4 @@
-<section class="hero py-5 text-white text-center" style="background: url('{{ asset('images/hero_background_3.jpg') }}') no-repeat center center;">
+<section class="hero py-5 text-white text-center" style="">
     <div class="container">
         <h2 class="display-4 mb-3">Преобразите свой руль</h2>
         <p class="lead mb-4">Закажите профессиональную обтяжку и придайте рулю уникальный вид.</p>
