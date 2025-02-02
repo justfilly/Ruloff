@@ -1,5 +1,5 @@
 <section id="prices" class="py-5">
-    <div class="container">
+    <div class="container-flex">
         <h3>Стоимость обтяжки руля</h3>
         <div class="prices-container">
             @foreach($steeringWheelPrices as $priceItem)

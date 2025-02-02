@@ -17,6 +17,8 @@
     column-gap: 60px;
     row-gap: 30px;
     position: relative;
+    max-width: 80%;
+    margin: 0 auto;
 }
 
 #prices .prices-container::before {
@@ -69,9 +71,45 @@
 @media (max-width: 768px) {
     #prices .prices-container {
         grid-template-columns: 1fr;
+        padding: 0 10px;
     }
 
     #prices .prices-container::before {
         display: none;
+    }
+}
+
+@media (max-width: 1440px) {
+    #prices .price-item-description {
+        -webkit-line-clamp: 3;
+        min-height: 3.6em;
+    }
+
+    #prices .prices-container {
+        max-width: 95%;
+    }
+}
+
+@media (max-width: 480px) { 
+    #prices h3 {
+        font-size: 1.5rem;
+    }
+
+    #prices .price-item-title {
+        font-size: 0.9rem;
+    }
+
+    #prices .price-item-description {
+        -webkit-line-clamp: 4;
+        font-size: 0.8rem;
+    }
+
+    #prices .price-item-price {
+        font-size: 0.9rem; 
+    }
+    
+    #prices .prices-container {
+        grid-template-columns: 1fr;
+        padding: 0 5px;
     }
 }
