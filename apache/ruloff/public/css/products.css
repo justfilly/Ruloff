@@ -3,7 +3,7 @@
     padding: 60px 0;
 }
 
-#products h2 {
+#products h3 {
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 40px;
@@ -80,7 +80,7 @@
 }
 
 @media (max-width: 480px) { 
-    #prices h3 {
+    #products h3 {
         font-size: 1.5rem;
     }
 

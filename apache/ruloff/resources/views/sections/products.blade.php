@@ -1,6 +1,6 @@
 <section id="products" class="py-5">
     <div class="container">
-        <h2 class="text-center mb-4">Примеры работ</h2>
+        <h3 class="text-center mb-4">Примеры работ</h3>
         
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">

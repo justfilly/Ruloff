@@ -1,6 +1,6 @@
 <section id="faq" class="py-5">
     <div class="container">
-        <h2 class="text-center mb-4">Часто задаваемые вопросы</h2>
+        <h3 class="text-center mb-4">Часто задаваемые вопросы</h3>
 
         <div class="accordion" id="faqAccordion">
             @foreach($faqs as $index => $faq)

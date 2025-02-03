@@ -15,4 +15,19 @@ document.addEventListener("DOMContentLoaded", function () {
             0: {slidesPerView: 1}  
         }
     });
+
+
+    var reviewsSwiper = new Swiper(".reviewsSwiper", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 }
+        }
+    });
+    
 });
