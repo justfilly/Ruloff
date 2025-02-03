@@ -10,7 +10,7 @@
                     <input type="text" id="name" name="name" class="form-control" placeholder="Ваше имя" required>
                 </div>
                 <div class="flex-grow-1">
-                    <input type="tel" id="phone" name="phone" class="form-control" placeholder="Номер телефона" required>
+                    <input type="tel" id="phone" name="phone" class="form-control" placeholder="+7 (___) ___-__-__" required maxlength="18">
                 </div>
                 <div class="flex-grow-0">
                     <button type="submit" class="btn btn-primary">Оставить заявку</button>
