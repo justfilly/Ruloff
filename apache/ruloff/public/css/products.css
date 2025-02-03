@@ -8,50 +8,99 @@
     font-weight: 700;
     margin-bottom: 40px;
     color: #333;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-.product-card {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-    padding: 20px;
     text-align: center;
 }
 
-.product-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+.swiper {
+    width: 100%;
+    padding: 1rem!important;
 }
 
-.product-card h3 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 10px;
-    min-height: 3rem;
-    overflow: hidden;
-}
-
-.product-card p {
-    font-size: 1.2rem;
-    color: #666;
-    margin-bottom: 5px;
-    flex-grow: 1;
-    text-align: left;
+.product-card {
+    width: 100%; 
+    aspect-ratio: 1 / 1;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
 }
 
 .product-card img {
     max-width: 90%;
     height: auto;
     border-radius: 8px;
-    margin-bottom: 15px;
     object-fit: cover;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 1.5rem;
+}
+
+.product-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    margin: 10px 0;
+}
+
+.product-card p {
+    font-size: 1rem;
+    color: #666;
+    padding: 0 15px;
+    flex-grow: 1;
+    text-align: left;
+}
+
+#product .mySwiper {
+    padding: 1rem!important;
+}
+
+.swiper-button-prev, 
+.swiper-button-next {
+    all: unset;
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    background: none;
+    border: none;
+    color: inherit;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    content: none;
+}
+
+@media (max-width: 767px) { 
+    #products .container {
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 480px) { 
+    #prices h3 {
+        font-size: 1.5rem;
+    }
+
+    .product-card h3 {
+        font-size: 0.9rem; 
+    }
+
+    .product-card p {
+        font-size: 0.8rem; 
+    }
+
+    #products .swiper {
+        width: 80%;
+    }
+}
+
+#products .swiper-button-prev {
+    left: 0px!important;
+}
+
+#products .swiper-button-next {
+    right: 0px!important;
 }
