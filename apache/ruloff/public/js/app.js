@@ -1,9 +1,22 @@
 document.addEventListener("DOMContentLoaded", function () {
     const nameInput = document.getElementById("name");
     const phoneInput = document.getElementById("phone");
+    const consentCheckbox = document.getElementById("consent");
+    const form = document.querySelector("form");
+
+    const nameError = document.createElement("div");
+    nameError.className = "invalid-feedback";
+    nameError.textContent = "Введите ваше имя";
+    nameInput.parentNode.appendChild(nameError);
+
+    const phoneError = document.createElement("div");
+    phoneError.className = "invalid-feedback";
+    phoneError.textContent = "Введите полный номер";
+    phoneInput.parentNode.appendChild(phoneError);
 
     nameInput.addEventListener("input", function () {
         this.value = this.value.replace(/[^А-Яа-яЁё\s]/g, "");
+        this.classList.remove("is-invalid");
     });
 
     phoneInput.addEventListener("input", function () {
@@ -24,6 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         phoneInput.value = formattedValue;
+        phoneInput.classList.remove("is-invalid");
     });
 
     phoneInput.addEventListener("keydown", function (e) {
@@ -50,6 +64,26 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+    form.addEventListener("submit", function (e) {
+        let digitsOnly = phoneInput.value.replace(/\D/g, "");
+        let name = nameInput.value.trim();
+        let consentChecked = consentCheckbox.checked;
+
+        if (digitsOnly.length !== 11) {
+            e.preventDefault();
+            phoneInput.classList.add("is-invalid");
+        }
+
+        if (name === "") {
+            e.preventDefault();
+            nameInput.classList.add("is-invalid");
+        }
+
+        if (!consentChecked) {
+            e.preventDefault();
+            consentCheckbox.classList.add("is-invalid");
+        }
+    });
 
     var swiper = new Swiper(".mySwiper", {
         slidesPerView: 3,

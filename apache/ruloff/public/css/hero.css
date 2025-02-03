@@ -124,3 +124,6 @@
     }
 }
 
+.form-check-input.is-invalid {
+    border-color: red !important;
+}

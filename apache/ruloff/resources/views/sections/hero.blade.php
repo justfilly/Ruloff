@@ -7,17 +7,17 @@
             @csrf
             <div class="mb-3 d-flex justify-content-center fields-container">
                 <div class="flex-grow-1">
-                    <input type="text" id="name" name="name" class="form-control" placeholder="Ваше имя" required>
+                    <input type="text" id="name" name="name" class="form-control" placeholder="Ваше имя">
                 </div>
                 <div class="flex-grow-1">
-                    <input type="tel" id="phone" name="phone" class="form-control" placeholder="+7 (___) ___-__-__" required maxlength="18">
+                    <input type="tel" id="phone" name="phone" class="form-control" placeholder="+7 (___) ___-__-__" maxlength="18">
                 </div>
                 <div class="flex-grow-0">
                     <button type="submit" class="btn btn-primary">Оставить заявку</button>
                 </div>
             </div>
             <div class="mb-3 d-flex align-items-center justify-content-center checkbox-container">
-                <input type="checkbox" class="form-check-input me-2 toggle-checkbox" id="consent" name="consent" required>
+                <input type="checkbox" class="form-check-input me-2 toggle-checkbox" id="consent" name="consent">
                 <label class="form-check-label" for="consent">Согласие на обработку персональных данных</label>
             </div>
         </form>
