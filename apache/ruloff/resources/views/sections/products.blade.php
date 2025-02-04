@@ -8,7 +8,7 @@
                     <div class="swiper-slide">
                         <div class="product-card">
                             <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}">
-                            <h3>{{ $product->name }}</h3>
+                            <h4>{{ $product->name }}</h4>
                             <p>{{ $product->description }}</p>
                         </div>
                     </div>
