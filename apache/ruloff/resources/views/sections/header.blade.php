@@ -27,7 +27,7 @@
                         <li><a href="#prices" class="nav-link">Цены</a></li>
                         <li><a href="#products" class="nav-link">Примеры работ</a></li>
                         <li><a href="#reviews" class="nav-link">Отзывы</a></li>
-                        <li><a href="#map" class="nav-link">Карта</a></li>
+                        <li><a href="{{ route('news.index') }}" class="nav-link">Новости</a></li>
                     </ul>
                 </nav>
             </div>

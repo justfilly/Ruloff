@@ -3,7 +3,11 @@ footer {
     color: #ccc;
     font-size: 0.9rem;
     border-top: 1px solid #444;
+    padding: 15px 0;
+    text-align: center;
+    margin-top: auto;
 }
+
 
 footer p {
     margin: 0;
