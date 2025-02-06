@@ -21,4 +21,12 @@ Route::group(['prefix' => 'admin'], function () {
 //Study
 use App\Http\Controllers\ProductController;
 
+Route::get('/news/discount', function () {
+    return view('pages.news.discount');
+})->name('news.discount');
+
+
+Route::get('/employees', function () {
+    return view('pages.employees.index');
+})->name('employees.index');
 Route::get('/product/{id}', [ProductController::class, 'show'])->name('product.show');
