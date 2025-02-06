@@ -1,5 +1,8 @@
 @extends('layout')
 
+@section('title', 'Главная страница')
+@section('description', 'Добро пожаловать на нашу главную страницу. Узнайте о наших услугах, продуктах, отзывах и часто задаваемых вопросах.')
+
 @push('styles')
     <link rel="stylesheet" href="{{ asset('css/hero.css') }}">
     <link rel="stylesheet" href="{{ asset('css/prices.css') }}">
