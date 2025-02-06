@@ -1,2 +1,9 @@
 User-agent: *
-Disallow:
+Disallow: /admin/
+Disallow: /img/admin/
+Disallow: /support/
+Disallow: /index.html
+Disallow: /*&$
+Allow: /error.html
+Disallow: http://www.ruloff.ru/
+Disallow: https://www.ruloff.ru/    
