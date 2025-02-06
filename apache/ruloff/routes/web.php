@@ -32,3 +32,6 @@ Route::get('/news/discount', function () {
 })->name('news.discount');
 
 
+Route::get('/employees', function () {
+    return view('pages.employees.index');
+})->name('employees.index');
