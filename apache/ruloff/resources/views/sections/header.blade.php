@@ -27,8 +27,6 @@
                         <li><a href="#prices" class="nav-link">Цены</a></li>
                         <li><a href="#products" class="nav-link">Примеры работ</a></li>
                         <li><a href="#reviews" class="nav-link">Отзывы</a></li>
-                        <li><a href="{{ route('news.index') }}" class="nav-link">Новости</a></li>
-                        <li><a href="{{ route('employees.index') }}" class="nav-link">Сотрудники</a></li>
                     </ul>
                 </nav>
             </div>
@@ -74,7 +72,6 @@
             <li><a href="#prices" class="nav-link"><i class="bi bi-tag"></i> Цены</a></li>
             <li><a href="#products" class="nav-link"><i class="bi bi-images"></i> Примеры работ</a></li>
             <li><a href="#reviews" class="nav-link"><i class="bi bi-star"></i> Отзывы</a></li>
-            <li><a href="#map" class="nav-link"><i class="bi bi-geo-alt"></i> Карта</a></li>
         </ul>
         <hr>
         <div class="menu-contact">
