@@ -16,6 +16,6 @@ class OrderController extends Controller
 
         Order::create($validated);
 
-        return redirect()->back();
+        return redirect('/');
     }
 }
