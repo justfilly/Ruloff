@@ -8,7 +8,7 @@
                     <div class="swiper-slide">
                         <div class="product-card">
                             <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}" loading="lazy">
-                            <h4>{{ $product->name }}</h4>
+                            <h4><a href="{{ route('product.show', $product->id) }}">{{ $product->name }}</a></h4>
                             <p>{{ $product->description }}</p>
                         </div>
                     </div>

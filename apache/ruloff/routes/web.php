@@ -17,3 +17,8 @@ Route::post('/orders', [OrderController::class, 'store'])->name('order.store');
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
+
+//Study
+use App\Http\Controllers\ProductController;
+
+Route::get('/product/{id}', [ProductController::class, 'show'])->name('product.show');
