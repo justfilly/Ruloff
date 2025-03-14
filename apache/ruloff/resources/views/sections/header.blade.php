@@ -16,7 +16,7 @@
                     </span>
                     <span>
                         <i class="bi bi-geo-alt"></i> 
-                        Адрес: ул. Примерная, 123
+                        Адрес: ул. Пepexодникoва, 22
                     </span>
                 </div>
             </div>
@@ -68,11 +68,13 @@
         <label for="menu-toggle" class="btn btn-outline-dark menu-btn close-btn">
             <i class="bi bi-x"></i>
         </label>
-        <ul class="list-unstyled mt-8">
-            <li><a href="#prices" class="nav-link"><i class="bi bi-tag"></i> Цены</a></li>
-            <li><a href="#products" class="nav-link"><i class="bi bi-images"></i> Примеры работ</a></li>
-            <li><a href="#reviews" class="nav-link"><i class="bi bi-star"></i> Отзывы</a></li>
-        </ul>
+        <nav>
+            <ul class="list-unstyled mt-8">
+                <li><a href="#prices" class="nav-link"><i class="bi bi-tag"></i> Цены</a></li>
+                <li><a href="#products" class="nav-link"><i class="bi bi-images"></i> Примеры работ</a></li>
+                <li><a href="#reviews" class="nav-link"><i class="bi bi-star"></i> Отзывы</a></li>
+            </ul>
+        </nav>
         <hr>
         <div class="menu-contact">
             <div class="menu-phone">
@@ -81,7 +83,7 @@
             </div>
             <div class="menu-address">
                 <i class="bi bi-geo-alt"></i> 
-                ул. Примерная 123
+                ул. Пepexодникoва 22
             </div>
         </div>
     </div>
