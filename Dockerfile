@@ -1,19 +1,23 @@
 FROM php:8.2-apache
 
-# Install required system packages and PHP extensions
 RUN apt-get update && apt-get install -y \
     libpng-dev libjpeg-dev libfreetype6-dev libwebp-dev libxpm-dev \
     libexif-dev \
     zip unzip \
     && docker-php-ext-configure gd --with-freetype --with-jpeg --with-webp --with-xpm \
     && docker-php-ext-install gd exif pdo pdo_mysql \
-    && docker-php-ext-enable exif
+    && docker-php-ext-enable exif \
+    && apt-get clean
 
-# Enable Apache mod_rewrite for Laravel
 RUN a2enmod rewrite
 
-# Set working directory
-WORKDIR /var/www/html
+COPY apache/default.conf /etc/apache2/sites-available/000-default.conf
+RUN a2ensite 000-default.conf
 
-# Expose port 80 for Apache
-EXPOSE 80
+COPY apache/.htpasswd /etc/apache2/.htpasswd    
+
+RUN mkdir -p /var/www/html/storage /var/www/html/bootstrap/cache
+RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
+RUN chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache
+
+WORKDIR /var/www/html

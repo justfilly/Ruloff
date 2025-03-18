@@ -1,20 +1,18 @@
-version: '3.8'
-
 services:
   apache:
     build: .
     container_name: php_apache_1
     volumes:
-      - ./apache:/var/www/html
+      - ./apache/ruloff:/var/www/html 
     ports:
-      - "8000:8000"
+      - "80:80"
     networks:
       - apache_network
     depends_on:
       - mysql
 
   mysql:
-    image: mysql:latest
+    image: mysql:8.4
     container_name: mysql_1
     environment:
       MYSQL_ROOT_PASSWORD: QaEP4CnuLfrqWMvA8UjSdD
