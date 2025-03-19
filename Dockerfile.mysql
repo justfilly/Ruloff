@@ -1,0 +1,5 @@
+FROM mysql:8.4
+
+COPY ./mysql/light.cnf /etc/mysql/conf.d/light.cnf
+
+RUN chmod 644 /etc/mysql/conf.d/light.cnf
