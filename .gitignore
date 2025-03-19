@@ -1,2 +1,4 @@
 Credentials.txt
 docs/
+.env.prod
+.env
