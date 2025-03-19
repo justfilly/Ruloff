@@ -1,6 +1,8 @@
 services:
   apache:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile.apache
     container_name: php_apache_1
     volumes:
       - ./apache/ruloff:/var/www/html 
@@ -12,19 +14,21 @@ services:
       - mysql
 
   mysql:
-    image: mysql:8.4
+    build:
+      context: .
+      dockerfile: Dockerfile.mysql
     container_name: mysql_1
     environment:
       MYSQL_ROOT_PASSWORD: QaEP4CnuLfrqWMvA8UjSdD
       MYSQL_DATABASE: database
     volumes:
       - mysql_data:/var/lib/mysql
-      - ./backups:/backups
+      - ./mysql/backups:/backups
     ports:
       - "3306:3306"
     networks:
       - apache_network
-    entrypoint: /bin/bash -c "docker-entrypoint.sh mysqld & while ! mysqladmin --silent --wait=30 ping; do echo 'Waiting for MySQL...'; sleep 2; done; mysqldump -u root -pQaEP4CnuLfrqWMvA8UjSdD database > /backups/db_backup_$(date +\%F_%H-%M-%S).sql; wait"
+    entrypoint: /bin/bash -c "docker-entrypoint.sh mysqld & while ! mysqladmin --silent --wait=30 ping; do echo 'Waiting for MySQL...'; sleep 2; done; mysqldump -u root -pQaEP4CnuLfrqWMvA8UjSdD database > /backups/db_backup_$(date +\%F_%H-%M-%S).sql; wait" 
 
 networks:
   apache_network:
