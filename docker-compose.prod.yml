@@ -14,7 +14,7 @@ services:
     environment:
       - ENVIRONMENT=production
     env_file:
-      - ./apache/ruloff/.env.prod
+      - ./apache/ruloff/.env
     restart: always
     logging:
       driver: "json-file"
