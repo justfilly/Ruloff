@@ -2,7 +2,7 @@ services:
   apache:
     build:
       context: .
-      dockerfile: Dockerfile.apache.dev
+      dockerfile: Dockerfile.apache
     container_name: php_apache_1
     volumes:
       - ./apache/ruloff:/var/www/html 
@@ -13,14 +13,14 @@ services:
     environment:
       - ENVIRONMENT=development
     env_file:
-      - ./apache/ruloff/.env.dev
+      - ./apache/ruloff/.env
     depends_on:
       - mysql
 
   mysql:
     build:
       context: .
-      dockerfile: Dockerfile.mysql.dev
+      dockerfile: Dockerfile.mysql
     container_name: mysql_1
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
