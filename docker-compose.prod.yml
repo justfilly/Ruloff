@@ -3,6 +3,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.apache
+      args:
+        ENVIRONMENT: ${ENVIRONMENT}
     container_name: php_apache_ruloff
     volumes:
       - ./apache/ruloff:/var/www/html
@@ -14,10 +16,8 @@ services:
       - "443:443"
     networks:
       - apache_network
-    environment:
-      - ENVIRONMENT=production
     env_file:
-      - ./apache/ruloff/.env
+      - ./apache/ruloff/.env 
     restart: always
     logging:
       driver: "json-file"
@@ -40,6 +40,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.mysql
+      args:
+        ENVIRONMENT: ${ENVIRONMENT}
     container_name: mysql_ruloff
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
