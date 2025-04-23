@@ -1,5 +1,8 @@
 FROM php:8.2-apache
 
+ARG ENVIRONMENT
+ENV ENVIRONMENT=${ENVIRONMENT}
+
 RUN apt-get update && apt-get install -y \
     libpng-dev libjpeg-dev libfreetype6-dev libwebp-dev libxpm-dev \
     libexif-dev \
@@ -14,6 +17,7 @@ RUN mv composer.phar /usr/local/bin/composer
 
 RUN a2enmod rewrite
 RUN a2enmod headers
+RUN if [ "$ENVIRONMENT" = "production" ]; then a2enmod ssl; fi
 
 # Disable unnecessary modules to save memory
 RUN a2dismod -f autoindex
