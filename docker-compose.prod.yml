@@ -9,7 +9,7 @@ services:
     volumes:
       - ./apache/ruloff:/var/www/html
       - ./apache/logs:/var/log/apache2
-      - ./certbot/www:/var/www/html/public/.well-known
+      - ./certbot/www:/var/www/html/.well-known
       - ./certbot/conf:/etc/letsencrypt
     ports:
       - "80:80"
@@ -17,7 +17,7 @@ services:
     networks:
       - apache_network
     env_file:
-      - ./apache/ruloff/.env 
+      - ./apache/ruloff/.env
     restart: always
     logging:
       driver: "json-file"
@@ -31,7 +31,7 @@ services:
     volumes:
       - ./certbot/www:/var/www/html
       - ./certbot/conf:/etc/letsencrypt
-      - certbot_data:/var/lib/letsencrypt 
+      - certbot_data:/var/lib/letsencrypt
     entrypoint: sh -c "trap exit TERM; while :; do sleep 6h & wait $${!}; certbot renew --webroot -w /var/www/html --quiet; done"
     networks:
       - apache_network
