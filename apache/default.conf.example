@@ -1,0 +1,56 @@
+<IfModule mpm_event_module>
+    StartServers             2
+    MinSpareThreads         25
+    MaxSpareThreads         75
+    ThreadLimit             64
+    ThreadsPerChild         25
+    MaxRequestWorkers       150
+    MaxConnectionsPerChild  5000
+</IfModule>
+
+# Dev and Prod VirtualHost for HTTP (Port 80)
+<VirtualHost *:80>
+    # Change this to your domain for prod or localhost for dev
+    ServerName YOUR_DOMAIN_HERE_OR_LOCALHOST
+    DocumentRoot /var/www/html/public
+    DirectoryIndex index.php index.html index.htm
+
+    <Directory /var/www/html/public>
+        AllowOverride All
+        Require all granted
+        Header set X-Content-Type-Options "nosniff"
+        Header set X-Frame-Options "DENY"
+        Header set X-XSS-Protection "1; mode=block"
+        Header set Referrer-Policy "no-referrer-when-downgrade"
+    </Directory>
+
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+    # Redirect HTTP to HTTPS in production (remove this part for dev)
+    Redirect permanent / https://YOUR_DOMAIN_HERE_OR_LOCALHOST/
+</VirtualHost>
+
+# Prod VirtualHost for HTTPS (Port 443)
+<VirtualHost *:443>
+    # Change this to your domain for prod
+    ServerName YOUR_DOMAIN_HERE
+    DocumentRoot /var/www/html/public
+    DirectoryIndex index.php index.html index.htm
+
+    <Directory /var/www/html/public>
+        AllowOverride All
+        Require all granted
+        Header set X-Content-Type-Options "nosniff"
+        Header set X-Frame-Options "DENY"
+        Header set X-XSS-Protection "1; mode=block"
+        Header set Referrer-Policy "no-referrer-when-downgrade"
+    </Directory>
+
+    SSLEngine on
+    SSLCertificateFile /etc/letsencrypt/live/YOUR_DOMAIN_HERE/fullchain.pem
+    SSLCertificateKeyFile /etc/letsencrypt/live/YOUR_DOMAIN_HERE/privkey.pem
+
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
