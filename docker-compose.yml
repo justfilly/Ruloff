@@ -10,8 +10,6 @@ services:
       - "80:80"
     networks:
       - apache_network
-    environment:
-      - ENVIRONMENT=development
     env_file:
       - ./apache/ruloff/.env
     depends_on:
