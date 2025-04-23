@@ -3,6 +3,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.apache
+      args:
+        ENVIRONMENT: ${ENVIRONMENT}
     container_name: php_apache_ruloff
     volumes:
       - ./apache/ruloff:/var/www/html
@@ -38,6 +40,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.mysql
+      args:
+        ENVIRONMENT: ${ENVIRONMENT}
     container_name: mysql_ruloff
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
