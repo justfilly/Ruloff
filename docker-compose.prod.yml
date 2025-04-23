@@ -31,6 +31,7 @@ services:
     volumes:
       - ./certbot/www:/var/www/html
       - ./certbot/conf:/etc/letsencrypt
+      - certbot_data:/var/lib/letsencrypt 
     entrypoint: sh -c "trap exit TERM; while :; do sleep 6h & wait $${!}; certbot renew --webroot -w /var/www/html --quiet; done"
     networks:
       - apache_network
@@ -66,3 +67,4 @@ networks:
 volumes:
   mysql_data:
     external: true
+  certbot_data: 
