@@ -16,7 +16,7 @@
                     </span>
                     <span>
                         <i class="bi bi-geo-alt"></i> 
-                        Адрес: ул. Пepexодникoва, 22
+                        Адрес: ул. Примерная, 123
                     </span>
                 </div>
             </div>
@@ -83,7 +83,7 @@
             </div>
             <div class="menu-address">
                 <i class="bi bi-geo-alt"></i> 
-                ул. Пepexодникoва 22
+                ул. Примерная, 123
             </div>
         </div>
     </div>
