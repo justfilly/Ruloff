@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title')</title>
     <meta name="description" content="@yield('description')">
+
+    <link rel="preload" as="image" href="{{ asset('images/hero_background_desktop.webp') }}" type="image/webp">
+    <link rel="preload" as="image" href="{{ asset('images/hero_background_tablet.webp') }}" type="image/webp">
+    <link rel="preload" as="image" href="{{ asset('images/hero_background_mobile.webp') }}" type="image/webp">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
