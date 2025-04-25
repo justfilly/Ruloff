@@ -6,10 +6,6 @@
     <title>@yield('title')</title>
     <meta name="description" content="@yield('description')">
 
-    <link rel="preload" as="image" href="{{ asset('images/hero_background_desktop.webp') }}" type="image/webp">
-    <link rel="preload" as="image" href="{{ asset('images/hero_background_tablet.webp') }}" type="image/webp">
-    <link rel="preload" as="image" href="{{ asset('images/hero_background_mobile.webp') }}" type="image/webp">
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -19,7 +15,7 @@
     <link rel="stylesheet" href="{{ asset('css/header.css') }}">
     <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
     
-    @stack('styles')
+    @stack('links')
 </head>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
