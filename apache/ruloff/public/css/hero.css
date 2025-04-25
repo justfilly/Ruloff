@@ -1,5 +1,4 @@
 .hero {
-    background-image: url("../images/hero_background_desktop.webp");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -87,7 +86,13 @@
     gap: 10px;
 }
 
-@media (max-width: 1280px) {
+@media (min-width: 1281px) {
+    .hero {
+        background-image: url("../images/hero_background_desktop.webp");
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1280px) {
     .hero {
         background-image: url("../images/hero_background_tablet.webp");
     }
