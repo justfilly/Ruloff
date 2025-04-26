@@ -89,7 +89,33 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    var swiper = new Swiper(".mySwiper", {
+    function loadSliderImages(slider, imageContainerSelector) {
+        const images = slider.querySelectorAll(`${imageContainerSelector} img[loading="lazy"]`);
+        images.forEach(img => {
+            img.removeAttribute('loading');
+        });
+    }
+
+    function initSwiper(sliderSelector, imageContainerSelector, swiperOptions) {
+        const sliderElement = document.querySelector(sliderSelector);
+        if (!sliderElement) return null;
+
+        const swiper = new Swiper(sliderSelector, swiperOptions);
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    loadSliderImages(entry.target, imageContainerSelector);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        observer.observe(sliderElement);
+        return swiper;
+    }
+
+    initSwiper(".mySwiper", ".product-card", {
         slidesPerView: 3,
         spaceBetween: 30,
         loop: true,
@@ -102,12 +128,11 @@ document.addEventListener("DOMContentLoaded", function () {
             768: { slidesPerView: 2 },
             576: { slidesPerView: 1 },
             320: { slidesPerView: 1 },
-            0: {slidesPerView: 1}  
+            0: { slidesPerView: 1 }
         }
     });
 
-
-    var reviewsSwiper = new Swiper(".reviewsSwiper", {
+    initSwiper(".reviewsSwiper", ".review-item", {
         slidesPerView: 1,
         spaceBetween: 10,
         navigation: {
@@ -119,5 +144,4 @@ document.addEventListener("DOMContentLoaded", function () {
             1024: { slidesPerView: 3 }
         }
     });
-    
 });
