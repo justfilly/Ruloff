@@ -4,15 +4,19 @@ document.addEventListener("DOMContentLoaded", function () {
     const consentCheckbox = document.getElementById("consent");
     const form = document.querySelector("form");
 
-    const nameError = document.createElement("div");
-    nameError.className = "invalid-feedback";
-    nameError.textContent = "Введите ваше имя";
-    nameInput.parentNode.appendChild(nameError);
-
-    const phoneError = document.createElement("div");
-    phoneError.className = "invalid-feedback";
-    phoneError.textContent = "Введите полный номер";
-    phoneInput.parentNode.appendChild(phoneError);
+    if (!nameInput.parentNode.querySelector(".invalid-feedback")) {
+        const nameError = document.createElement("div");
+        nameError.className = "invalid-feedback";
+        nameError.textContent = "Введите ваше имя";
+        nameInput.parentNode.appendChild(nameError);
+    }
+    
+    if (!phoneInput.parentNode.querySelector(".invalid-feedback")) {
+        const phoneError = document.createElement("div");
+        phoneError.className = "invalid-feedback";
+        phoneError.textContent = "Введите полный номер";
+        phoneInput.parentNode.appendChild(phoneError);
+    }
 
     nameInput.addEventListener("input", function () {
         this.value = this.value.replace(/[^А-Яа-яЁё\s]/g, "");
