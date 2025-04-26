@@ -10,30 +10,19 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
-    <link rel="stylesheet" href="{{ asset('css/layout.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/header.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+
+    @if (app()->environment('local'))
+        <link href="{{ asset('css/layout.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/header.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/footer.css') }}" rel="stylesheet">
+        @stack('links')
+        <script src="{{ asset('js/app.js') }}"></script>
+    @else
+        <link href="{{ asset('css/min.css') }}" rel="stylesheet">
+        <script src="{{ asset('js/min.js') }}" defer></script>
+    @endif
     
     @stack('links')
-
-    <style>
-        @media (max-width: 768px) {
-            .hero {
-                background-image: url('{{ asset('images/hero_background_mobile.webp') }}');
-            }
-        }
-        @media (min-width: 769px) and (max-width: 1280px) {
-            .hero {
-                background-image: url('{{ asset('images/hero_background_tablet.webp') }}');
-            }
-        }
-        @media (min-width: 1281px) {
-            .hero {
-                background-image: url('{{ asset('images/hero_background_desktop.webp') }}');
-            }
-        }
-    </style>
 </head>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
