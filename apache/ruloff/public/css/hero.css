@@ -86,23 +86,7 @@
     gap: 10px;
 }
 
-@media (min-width: 1281px) {
-    .hero {
-        background-image: url("../images/hero_background_desktop.webp");
-    }
-}
-
-@media (min-width: 769px) and (max-width: 1280px) {
-    .hero {
-        background-image: url("../images/hero_background_tablet.webp");
-    }
-}
-
 @media (max-width: 768px) {
-    .hero {
-        background-image: url("../images/hero_background_mobile.webp");
-    }
-
     .hero form .fields-container {
         flex-direction: column;
         align-items: stretch;

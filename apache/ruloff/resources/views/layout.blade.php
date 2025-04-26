@@ -16,6 +16,24 @@
     <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
     
     @stack('links')
+
+    <style>
+        @media (max-width: 768px) {
+            .hero {
+                background-image: url('{{ asset('images/hero_background_mobile.webp') }}');
+            }
+        }
+        @media (min-width: 769px) and (max-width: 1280px) {
+            .hero {
+                background-image: url('{{ asset('images/hero_background_tablet.webp') }}');
+            }
+        }
+        @media (min-width: 1281px) {
+            .hero {
+                background-image: url('{{ asset('images/hero_background_desktop.webp') }}');
+            }
+        }
+    </style>
 </head>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
