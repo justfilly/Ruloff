@@ -20,13 +20,34 @@ Route::group(['prefix' => 'admin'], function () {
 
 //Study
 use App\Http\Controllers\ProductController;
+Route::get('/product/{id}', [ProductController::class, 'show'])->name('product.show');
 
-Route::get('/news/discount', function () {
-    return view('pages.news.discount');
-})->name('news.discount');
-
+use App\Models\ProductReview;
 
 Route::get('/employees', function () {
-    return view('pages.employees.index');
+    $reviews = ProductReview::all();
+    return view('study.employees', compact('reviews'));
 })->name('employees.index');
-Route::get('/product/{id}', [ProductController::class, 'show'])->name('product.show');
+
+use App\Models\Product;
+
+Route::get('/reviews', function () {
+    $products = Product::all();
+    return view('study.reviews', compact('products'));
+})->name('reviews.index');
+
+use App\Http\Controllers\ProductReviewController;
+Route::get('/reviews/create', [ProductReviewController::class, 'create'])->name('reviews.create');
+Route::post('/reviews/store', [ProductReviewController::class, 'store'])->name('reviews.store');
+
+Route::get('/about', function () {
+    return view('study.about');
+})->name('about.index');
+
+Route::get('/article1', function () {
+    return view('study.article1');
+})->name('article1.index');
+
+Route::get('/article2', function () {
+    return view('study.article2');
+})->name('article2.index');

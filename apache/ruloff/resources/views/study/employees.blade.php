@@ -1,6 +1,8 @@
 @extends('layout')
 
 @section('title', 'Сотрудники компании')
+@section('description', 'Познакомьтесь с командой Руль Сервис 52 — профессионалами, заботящимися о вашем комфорте за рулём.')
+@section('keywords', 'наша команда, сотрудники автосервиса, специалисты по перетяжке, персонал, профессионалы, Руль Сервис 52')
 
 @section('content')
     <style>
@@ -151,12 +153,16 @@
 
         <h3>Отзывы</h3>
         <div class="comments">
-            <div class="comment">
-                <p><strong>Алексей Смирнов:</strong> Отличная работа, быстро и качественно!</p>
-            </div>
-            <div class="comment">
-                <p><strong>Екатерина Кузнецова:</strong> Очень довольна результатом, руль стал как новый!</p>
-            </div>
+            @foreach ($reviews as $review)
+                <div class="comment">
+                    <p><strong>{{ $review->user_name }}</strong> оставил отзыв о товаре <strong>{{ $review->product->name ?? 'Неизвестно' }}</strong>:</p>
+                    <p>{{ $review->review_text }}</p>
+                </div>
+            @endforeach
+
+            @if ($reviews->isEmpty())
+                <p>Пока нет отзывов.</p>
+            @endif
         </div>
 
         <h3>Наши социальные сети</h3>
