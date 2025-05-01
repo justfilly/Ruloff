@@ -29,6 +29,7 @@
                         <li><a href="#reviews" class="nav-link">Отзывы</a></li>
                         <li><a href="{{ route('employees.index') }}" class="nav-link">Сотрудники</a></li>
                         <li><a href="{{ route('reviews.index') }}" class="nav-link">Оставить отзыв</a></li>
+                        <li><a href="{{ route('about.index') }}" class="nav-link">О нас</a></li>
                     </ul>
                 </nav>
             </div>

@@ -98,5 +98,12 @@
                ✓ Работаем с экзотическими материалами: алькантара, Nappa, перфорированная кожа<br>
                ✓ Поддержка клиентов на всех этапах — от консультации до гарантии</p>
         </div>
+
+        <div class="block" style="background-color: #ffffff; border-left: 5px solid #17a2b8;">
+            <h2>Читайте также</h2>
+            <p><a href="{{ url('/article2') }}">Перетяжка руля Volkswagen Passat B6 — Nappa и красная строчка</a></p>
+            <p><a href="{{ url('/article1') }}">Перетяжка руля BMW X5 — Nappa, неопрен, Alpina</a></p>
+        </div>
+
     </div>
 @endsection
