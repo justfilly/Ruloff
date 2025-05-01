@@ -171,19 +171,5 @@
             <a href="#" class="social-link">Instagram</a>
             <a href="#" class="social-link">Vkontakte</a>
         </div>
-
-        <h3>Обратная связь</h3>
-        <form action="#" method="post" class="feedback-form">
-            @csrf
-            <div class="mb-3">
-                <label for="name" class="form-label">Ваше имя</label>
-                <input type="text" id="name" name="name" class="form-control" required>
-            </div>
-            <div class="mb-3">
-                <label for="message" class="form-label">Сообщение</label>
-                <textarea id="message" name="message" class="form-control" rows="4" required></textarea>
-            </div>
-            <button type="submit">Отправить</button>
-        </form>
     </div>
 @endsection
