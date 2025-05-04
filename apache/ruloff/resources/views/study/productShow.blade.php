@@ -12,7 +12,7 @@
                     <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}" class="img-fluid" style="max-width: 80%; height: auto;">
                 </div>
                 <p class="lead text-muted">{{ $product->detailed_description }}</p>
-                <a href="{{ url()->previous() }}" class="btn btn-primary mt-4">Back</a>
+                <a href="{{ url()->previous() }}" class="btn btn-primary mt-4">Назад</a>
             </div>
         </div>
     </div>

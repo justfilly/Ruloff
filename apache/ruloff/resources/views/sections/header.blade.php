@@ -24,9 +24,9 @@
             <div class="col-lg-6 d-none d-lg-block text-center">
                 <nav class="">
                     <ul class="list-unstyled mb-0">
-                        <li><a href="#prices" class="nav-link">Цены</a></li>
-                        <li><a href="#products" class="nav-link">Примеры работ</a></li>
-                        <li><a href="#reviews" class="nav-link">Отзывы</a></li>
+                        <li><a href="{{ url('/#prices') }}" class="nav-link">Цены</a></li>
+                        <li><a href="{{ url('/#products') }}" class="nav-link">Примеры работ</a></li>
+                        <li><a href="{{ url('/#reviews') }}" class="nav-link">Отзывы</a></li>
                         <li><a href="{{ route('employees.index') }}" class="nav-link">Сотрудники</a></li>
                         <li><a href="{{ route('reviews.index') }}" class="nav-link">Оставить отзыв</a></li>
                         <li><a href="{{ route('about.index') }}" class="nav-link">О нас</a></li>
@@ -73,9 +73,12 @@
         </label>
         <nav>
             <ul class="list-unstyled mt-8">
-                <li><a href="#prices" class="nav-link"><i class="bi bi-tag"></i> Цены</a></li>
-                <li><a href="#products" class="nav-link"><i class="bi bi-images"></i> Примеры работ</a></li>
-                <li><a href="#reviews" class="nav-link"><i class="bi bi-star"></i> Отзывы</a></li>
+                <li><a href="{{ url('/#prices') }}" class="nav-link">Цены</a></li>
+                <li><a href="{{ url('/#products') }}" class="nav-link">Примеры работ</a></li>
+                <li><a href="{{ url('/#reviews') }}" class="nav-link">Отзывы</a></li>
+                <li><a href="{{ route('employees.index') }}" class="nav-link">Сотрудники</a></li>
+                <li><a href="{{ route('reviews.index') }}" class="nav-link">Оставить отзыв</a></li>
+                <li><a href="{{ route('about.index') }}" class="nav-link">О нас</a></li>
             </ul>
         </nav>
         <hr>
