@@ -18,6 +18,15 @@
         @stack('links')
     @else
         <link href="{{ asset('css/min.css') }}" rel="stylesheet">
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-M69MBTXVCW"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-M69MBTXVCW');
+        </script>
     @endif
     
 </head>
