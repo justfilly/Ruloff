@@ -36,6 +36,20 @@ services:
       - apache_network
     entrypoint: /bin/bash -c "docker-entrypoint.sh mysqld & while ! mysqladmin --silent --wait=30 ping; do echo 'Waiting for MySQL...'; sleep 2; done; mysqldump -u root -pQaEP4CnuLfrqWMvA8UjSdD database > /backups/db_backup_$(date +\%F_%H-%M-%S).sql; wait" 
 
+  vite:
+    image: node:22-slim
+    container_name: vite_1
+    working_dir: /var/www/html
+    volumes:
+      - ./apache/ruloff:/var/www/html
+    ports:
+      - "5173:5173"
+    command: ["sh", "-c", "npm install && npm run dev"]
+    networks:
+      - apache_network
+    depends_on:
+      - apache
+
 networks:
   apache_network:
     driver: bridge
