@@ -7,6 +7,10 @@ RUN apt-get update && apt-get install -y \
     libpng-dev libjpeg-dev libfreetype6-dev libwebp-dev libxpm-dev \
     libexif-dev \
     libzip-dev zip unzip \
+    curl \
+    gnupg2 \
+    ca-certificates \
+    lsb-release \
     && docker-php-ext-configure gd --with-freetype --with-jpeg --with-webp --with-xpm \
     && docker-php-ext-install gd exif pdo pdo_mysql mysqli zip \
     && docker-php-ext-enable exif zip \
@@ -19,7 +23,6 @@ RUN a2enmod rewrite
 RUN a2enmod headers
 RUN if [ "$ENVIRONMENT" = "production" ]; then a2enmod ssl; fi
 
-# Disable unnecessary modules to save memory
 RUN a2dismod -f autoindex
 RUN a2dismod status
 
@@ -28,11 +31,13 @@ RUN a2ensite 000-default.conf
 
 COPY apache/.htpasswd /etc/apache2/.htpasswd    
 
-# Copy the custom php.ini for OpCache
 COPY apache/php.ini /usr/local/etc/php/conf.d/99-custom.ini
 
 RUN mkdir -p /var/www/html/storage /var/www/html/bootstrap/cache
 RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
 RUN chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache
+
+RUN curl -sL https://deb.nodesource.com/setup_22.x | bash - 
+RUN apt-get install -y nodejs
 
 WORKDIR /var/www/html
