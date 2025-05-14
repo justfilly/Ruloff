@@ -9,9 +9,6 @@ export default defineConfig({
         origin: 'http://localhost:5173',
         cors: true,
     },
-        build: {
-        manifest: true,
-    },
     plugins: [
         laravel({
             input: ['resources/css/app.css', 'resources/js/app.js'],
