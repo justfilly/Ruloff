@@ -1,7 +1,9 @@
 FROM php:8.2-apache
 
 ARG ENVIRONMENT
+ARG USE_HTPASSWD
 ENV ENVIRONMENT=${ENVIRONMENT}
+ENV USE_HTPASSWD=${USE_HTPASSWD}
 
 RUN apt-get update && apt-get install -y \
     libpng-dev libjpeg-dev libfreetype6-dev libwebp-dev libxpm-dev \
@@ -29,7 +31,7 @@ RUN a2dismod status
 COPY apache/default.conf /etc/apache2/sites-available/000-default.conf
 RUN a2ensite 000-default.conf
 
-COPY apache/.htpasswd /etc/apache2/.htpasswd    
+RUN if [ "$USE_HTPASSWD" = "true" ]; then cp /apache/.htpasswd /etc/apache2/.htpasswd; fi
 
 COPY apache/php.ini /usr/local/etc/php/conf.d/99-custom.ini
 
