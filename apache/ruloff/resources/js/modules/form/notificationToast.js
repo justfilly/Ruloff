@@ -9,7 +9,7 @@ domReady(() => {
             setTimeout(() => {
                 popup.remove()
             }, 1000)
-        }, 4000000)
+        }, 4000)
 
         sessionStorage.removeItem('form_submitted')
     }
