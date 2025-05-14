@@ -50,6 +50,10 @@ domReady(() => {
     form.addEventListener('submit', (e) => {
         if (!validateForm(nameInput, phoneInput, consentCheckbox)) {
             e.preventDefault()
+            return
         }
+
+        const submitButton = form.querySelector('button[type="submit"]')
+        submitButton.disabled = true
     })
 })
