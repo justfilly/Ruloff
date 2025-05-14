@@ -16,9 +16,9 @@
 </head>
 
 <body>
-    @include('sections.header')
+    @include('common.header')
     @yield('content')
-    @include('sections.footer')
+    @include('common.footer')
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
 </body>

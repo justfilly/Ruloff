@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite'
 import laravel from 'laravel-vite-plugin'
+import path from 'path'
 
 export default defineConfig({
     server: {
@@ -8,6 +9,11 @@ export default defineConfig({
         strictPort: true,
         origin: 'http://localhost:5173',
         cors: true,
+    },
+    resolve: {
+        alias: {
+            '@': path.resolve(__dirname, 'resources/js'),
+        },
     },
     plugins: [
         laravel({
