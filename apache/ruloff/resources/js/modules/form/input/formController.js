@@ -1,7 +1,8 @@
+import domReady from '../../../core/domReady'
 import { sanitizeName, formatPhoneInput, handleBackspace } from './formatter'
 import { validateForm } from './validators'
 
-export function initForm() {
+domReady(() => {
     const form = document.querySelector('form')
     const nameInput = document.getElementById('name')
     const phoneInput = document.getElementById('phone')
@@ -51,4 +52,4 @@ export function initForm() {
             e.preventDefault()
         }
     })
-}
+})

@@ -22,4 +22,10 @@
             </div>
         </form>
     </div>
+
+    @if(session('form_submitted'))
+        <div id="success-popup" class="position-fixed top-0 start-50 translate-middle-x mt-3 px-4 py-3 bg-success text-white rounded shadow" style="z-index: 1050; opacity: 1; transition: opacity 1s ease;">
+            Заявка успешно создана
+        </div>
+    @endif
 </section>

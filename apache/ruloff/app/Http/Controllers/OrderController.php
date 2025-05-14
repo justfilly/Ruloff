@@ -16,6 +16,6 @@ class OrderController extends Controller
 
         Order::create($validated);
 
-        return redirect('/');
+        return redirect('/')->with('form_submitted', true);
     }
 }
