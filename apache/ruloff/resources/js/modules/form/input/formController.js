@@ -1,4 +1,4 @@
-import domReady from '../../../core/domReady'
+import domReady from '@/core/domReady'
 import { sanitizeName, formatPhoneInput, handleBackspace } from './formatter'
 import { validateForm } from './validators'
 

@@ -1,4 +1,4 @@
-import domReady from '../../core/domReady'
+import domReady from '@/core/domReady'
 import { initSwiper } from './swiperHelper'
 import 'swiper/swiper-bundle.css'
 

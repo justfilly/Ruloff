@@ -1,16 +1,16 @@
-import domReady from '../../core/domReady'
+import domReady from '@/core/domReady'
 
-domReady(function () {
-    if (sessionStorage.getItem('form_submitted')) {
-        const popup = document.getElementById('success-popup');
+domReady(() => {
+    const popup = document.getElementById('success-popup')
 
+    if (sessionStorage.getItem('form_submitted') && popup) {
         setTimeout(() => {
-            popup.style.opacity = '0';
+            popup.style.opacity = '0'
             setTimeout(() => {
-                popup.remove();
-            }, 1000);
-        }, 3000);
+                popup.remove()
+            }, 1000)
+        }, 4000000)
 
-        sessionStorage.removeItem('form_submitted');
+        sessionStorage.removeItem('form_submitted')
     }
-});
+})
