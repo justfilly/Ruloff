@@ -15,7 +15,7 @@ export function showToast(message, type = 'success') {
     setTimeout(() => {
         toast.style.opacity = '0';
         setTimeout(() => toast.remove(), 1000);
-    }, 4000);
+    }, 5000);
 }
 
 window.showToast = showToast;
