@@ -8,9 +8,6 @@ export default defineConfig({
         strictPort: true,
         origin: 'http://localhost:5173',
         cors: true,
-        watch: {
-            usePolling: true
-        }
     },
         build: {
         manifest: true,
