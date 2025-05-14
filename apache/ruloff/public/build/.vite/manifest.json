@@ -1,0 +1,28 @@
+{
+  "public/images/hero_background_desktop.webp": {
+    "file": "assets/hero_background_desktop-Dk7UxMvk.webp",
+    "src": "public/images/hero_background_desktop.webp"
+  },
+  "public/images/hero_background_mobile.webp": {
+    "file": "assets/hero_background_mobile-DTXshPdN.webp",
+    "src": "public/images/hero_background_mobile.webp"
+  },
+  "public/images/hero_background_tablet.webp": {
+    "file": "assets/hero_background_tablet-CAIAyexQ.webp",
+    "src": "public/images/hero_background_tablet.webp"
+  },
+  "resources/css/app.css": {
+    "file": "assets/app-DLNhL8V6.css",
+    "src": "resources/css/app.css",
+    "isEntry": true
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-B7XjA0Hk.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true,
+    "css": [
+      "assets/app-CJ-KzOvo.css"
+    ]
+  }
+}
