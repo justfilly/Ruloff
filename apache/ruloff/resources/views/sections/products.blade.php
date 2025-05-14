@@ -7,9 +7,7 @@
                 @foreach($products as $product)
                     <div class="swiper-slide">
                         <div class="product-card">
-                            <a href="{{ asset('storage/' . $product->image) }}" class="zoomable-image" data-gallery="products">
-                                <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}" loading="lazy">
-                            </a>
+                            <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}" loading="lazy">
                             <h4>{{ $product->name }}</h4>
                             <p>{{ $product->description }}</p>
                         </div>
