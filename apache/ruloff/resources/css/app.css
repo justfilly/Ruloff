@@ -1,8 +1,11 @@
 @import './layout.css';
-@import './header.css';
-@import './footer.css';
-@import './hero.css';
-@import './prices.css';
-@import './products.css';
-@import './reviews.css';
-@import './faq.css';
+
+@import './common/header.css';
+@import './common/footer.css';
+@import './common/notificationToast.css';
+
+@import './sections/hero.css';
+@import './sections/prices.css';
+@import './sections/products.css';
+@import './sections/reviews.css';
+@import './sections/faq.css';

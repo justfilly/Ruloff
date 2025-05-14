@@ -14,8 +14,11 @@ class OrderController extends Controller
             'phone' => 'required|string|max:20',
         ]);
 
-        Order::create($validated);
-
-        return redirect('/')->with('form_submitted', true);
+        try {
+            Order::create($validated);
+            return redirect('/')->with('toast_message', ['message' => 'Заявка отправлена', 'type' => 'success']);
+        } catch (\Exception $e) {
+            return redirect('/')->with('toast_message', ['message' => 'Ошибка. Попробуйте позже', 'type' => 'error']);
+        }
     }
 }
