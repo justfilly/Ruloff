@@ -12,11 +12,11 @@
                 <div class="contact-info">
                     <span>
                         <i class="bi bi-telephone"></i> 
-                        Телефон: <a href="tel:+79991234567">+7 (999) 123-45-67</a>
+                        Телефон: <a href="tel:+79991234567">+7 (952) 339-64-00</a>
                     </span>
                     <span>
                         <i class="bi bi-geo-alt"></i> 
-                        Адрес: ул. Примерная, 123
+                        Адрес: ул. Переходникова, 22
                     </span>
                 </div>
             </div>
@@ -81,11 +81,11 @@
         <div class="menu-contact">
             <div class="menu-phone">
                 <i class="bi bi-telephone"></i> 
-                <a href="tel:+79991234567">+7 (999) 123-45-67</a>
+                <a href="tel:+79991234567">+7 (952) 339-64-00</a>
             </div>
             <div class="menu-address">
                 <i class="bi bi-geo-alt"></i> 
-                ул. Примерная, 123
+                ул. Переходникова, 22
             </div>
         </div>
     </div>
