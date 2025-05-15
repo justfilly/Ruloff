@@ -27,6 +27,7 @@
                         <li><a href="{{ url('/#prices') }}" class="nav-link">Цены</a></li>
                         <li><a href="{{ url('/#products') }}" class="nav-link">Примеры работ</a></li>
                         <li><a href="{{ url('/#reviews') }}" class="nav-link">Отзывы</a></li>
+                        <li><a href="{{ url('/#map') }}" class="nav-link">Карта</a></li>
                     </ul>
                 </nav>
             </div>
@@ -73,6 +74,7 @@
                 <li><a href="{{ url('/#prices') }}" class="nav-link">Цены</a></li>
                 <li><a href="{{ url('/#products') }}" class="nav-link">Примеры работ</a></li>
                 <li><a href="{{ url('/#reviews') }}" class="nav-link">Отзывы</a></li>
+                <li><a href="{{ url('/#map') }}" class="nav-link">Карта</a></li>
             </ul>
         </nav>
         <hr>
