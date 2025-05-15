@@ -5,9 +5,11 @@
     @section('keywords', 'перетяжка руля, Нижний Новгород, руль сервис 52, экокожа, натуральная кожа, автомобильный руль, ремонт руля, обтяжка руля, тюнинг салона, перешив руля')
 
     @section('content')
+        @include('common.toast')
         @include('sections.hero')
         @include('sections.prices')
         @include('sections.products')
         @include('sections.reviews')
+        @include('sections.map')
         @include('sections.faq')
     @endsection

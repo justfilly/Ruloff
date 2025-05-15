@@ -1,8 +1,4 @@
-import domReady from './core/domReady'
-import { initForm } from './modules/form/formController'
-import { initSliders } from './modules/slider/sliderController'
-
-domReady(() => {
-    initForm()
-    initSliders()
-})
+import '@/modules/form/input/formController'
+import '@/modules/slider/sliderController'
+import { showToast } from '@/modules/toast/toastController.js';
+import '@/modules/images-zoom-view/ImagesZoomView'

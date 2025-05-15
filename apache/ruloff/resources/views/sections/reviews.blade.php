@@ -7,7 +7,9 @@
                 @foreach($reviews as $review)
                     <div class="swiper-slide">
                         <div class="review-item">
-                            <img src="{{ asset('storage/' . $review->image) }}" alt="Review" class="img-fluid rounded" loading="lazy">
+                            <a href="{{ asset('storage/' . $review->image) }}" class="zoomable-image" data-gallery="reviews">
+                                <img src="{{ asset('storage/' . $review->image) }}" alt="Review" class="img-fluid rounded" loading="lazy">
+                            </a>
                         </div>
                     </div>
                 @endforeach

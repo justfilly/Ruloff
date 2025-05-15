@@ -1,7 +1,8 @@
+import domReady from '@/core/domReady'
 import { initSwiper } from './swiperHelper'
-import 'swiper/swiper-bundle.css';
+import 'swiper/swiper-bundle.css'
 
-export function initSliders() {
+domReady(() => {
     initSwiper('.mySwiper', '.product-card', {
         slidesPerView: 3,
         spaceBetween: 30,
@@ -31,4 +32,4 @@ export function initSliders() {
             1024: { slidesPerView: 3 },
         },
     })
-}
+})
