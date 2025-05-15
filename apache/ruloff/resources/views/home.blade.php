@@ -10,5 +10,6 @@
         @include('sections.prices')
         @include('sections.products')
         @include('sections.reviews')
+        @include('sections.map')
         @include('sections.faq')
     @endsection
